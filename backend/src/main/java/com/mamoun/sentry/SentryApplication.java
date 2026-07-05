@@ -1,13 +1,13 @@
-package com.mamoun.kessan;
+package com.mamoun.sentry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KessanApplication {
+public class SentryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KessanApplication.class, args);
+		SpringApplication.run(SentryApplication.class, args);
 	}
 
 }

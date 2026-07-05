@@ -1,10 +1,10 @@
-package com.mamoun.kessan;
+package com.mamoun.sentry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KessanApplicationTests {
+class SentryApplicationTests {
 
 	@Test
 	void contextLoads() {

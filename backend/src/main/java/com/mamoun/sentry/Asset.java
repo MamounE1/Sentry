@@ -1,4 +1,4 @@
-package com.mamoun.kessan;
+package com.mamoun.sentry;
 
 import java.math.BigDecimal;
 

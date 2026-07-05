@@ -6,7 +6,8 @@ target/
 .idea/
 *.class
 *.log
-application.yml
+.DS_Store
+application.yaml
 
 ### STS ###
 .apt_generated

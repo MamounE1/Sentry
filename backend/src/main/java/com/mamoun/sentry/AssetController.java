@@ -1,4 +1,4 @@
-package com.mamoun.kessan;
+package com.mamoun.sentry;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
