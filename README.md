@@ -1,4 +1,4 @@
-# Kessan - Spring Boot Financial Asset Manager
+# Sentry
 
 A modern, cloud-connected backend application for tracking investment portfolios. Built with Java 22 and Spring Boot 3, this service provides a robust REST API for managing stock assets with real-time cloud persistence.
 
