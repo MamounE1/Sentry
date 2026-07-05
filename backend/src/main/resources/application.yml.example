@@ -1,11 +1,11 @@
-# TEMPLATE FILE: Copy this to application.yml and provide your own values
+# TEMPLATE FILE: Copy this to application.yaml and provide your own values
 spring:
   application:
-    name: PortfolioTracker
+    name: Sentry
   datasource:
     url: jdbc:postgresql://your-db-url-here:6543/postgres?prepareThreshold=0
     username: your-username-here
-    password: ${DB_PASSWORD} # Set this in your IDE Environment Variables
+    password: ${SENTRY_DB_PASSWORD} # Set this as a user environment variable
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
