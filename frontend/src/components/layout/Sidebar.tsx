@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { Theme } from '../../hooks/useTheme'
+import { LogoMark } from '../LogoMark'
 
 interface NavItem {
   label: string
@@ -68,10 +69,8 @@ interface SidebarProps {
 export function Sidebar({ theme, onToggleTheme }: SidebarProps) {
   return (
     <aside className="flex h-screen w-56 shrink-0 flex-col border-r border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
-      <div className="px-5 py-5">
-        <span className="text-lg font-semibold tracking-tight text-navy-800 dark:text-navy-300">
-          Sentry
-        </span>
+      <div className="flex items-center px-5 py-5">
+        <LogoMark className="h-6 w-6 text-navy-800 dark:text-navy-300" />
       </div>
 
       <nav className="flex-1 space-y-0.5 px-3">
