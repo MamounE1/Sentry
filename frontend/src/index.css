@@ -1,6 +1,22 @@
 @import "tailwindcss";
+@import "@fontsource-variable/inter";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* A muted, professional navy — used sparingly as the one accent color */
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #7b93b3;
+  --color-navy-500: #486581;
+  --color-navy-600: #334e68;
+  --color-navy-700: #243b53;
+  --color-navy-800: #102a43;
+  --color-navy-900: #0a1929;
+}
 
 html,
 body,
@@ -10,4 +26,5 @@ body,
 
 body {
   margin: 0;
+  font-feature-settings: 'ss01' 1;
 }

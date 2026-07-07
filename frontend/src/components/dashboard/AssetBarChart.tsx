@@ -8,13 +8,13 @@ interface AssetBarChartProps {
 }
 
 export function AssetBarChart({ data, theme }: AssetBarChartProps) {
-  const barColor = theme === 'dark' ? '#60A5FA' : '#2563EB'
-  const gridColor = theme === 'dark' ? '#1f2937' : '#e5e7eb'
-  const tickColor = theme === 'dark' ? '#9ca3af' : '#6b7280'
+  const barColor = theme === 'dark' ? '#9FB3C8' : '#102A43'
+  const gridColor = theme === 'dark' ? '#262626' : '#e5e5e5'
+  const tickColor = theme === 'dark' ? '#a3a3a3' : '#737373'
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900">
-      <p className="mb-4 text-sm font-medium text-gray-500 dark:text-gray-400">
+    <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+      <p className="mb-4 text-sm font-medium text-neutral-500 dark:text-neutral-400">
         Quantity by stock
       </p>
       <ResponsiveContainer width="100%" height={300}>
@@ -24,10 +24,10 @@ export function AssetBarChart({ data, theme }: AssetBarChartProps) {
           <YAxis stroke={tickColor} tickLine={false} axisLine={false} />
           <Tooltip
             contentStyle={{
-              backgroundColor: theme === 'dark' ? '#111827' : '#ffffff',
+              backgroundColor: theme === 'dark' ? '#171717' : '#ffffff',
               border: `1px solid ${gridColor}`,
               borderRadius: 8,
-              color: theme === 'dark' ? '#f3f4f6' : '#111827',
+              color: theme === 'dark' ? '#f5f5f5' : '#171717',
             }}
           />
           <Bar dataKey="quantity" fill={barColor} radius={[4, 4, 0, 0]} />

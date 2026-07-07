@@ -9,6 +9,9 @@ interface AddStockModalProps {
 
 const emptyForm = { symbol: '', name: '', quantity: '', purchasePrice: '' }
 
+const inputClasses =
+  'mt-1 w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-navy-600 focus:outline-none dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:focus:border-navy-300'
+
 export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
   const [form, setForm] = useState(emptyForm)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -57,12 +60,12 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
-      <div className="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Add Stock</h2>
+      <div className="w-full max-w-sm rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
+        <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Add Stock</h2>
 
         <form className="mt-4 space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+            <label className="block text-sm font-medium text-neutral-500 dark:text-neutral-400">
               Symbol
             </label>
             <input
@@ -70,12 +73,12 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
               value={form.symbol}
               onChange={(e) => setForm({ ...form, symbol: e.target.value })}
               placeholder="AAPL"
-              className="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+            <label className="block text-sm font-medium text-neutral-500 dark:text-neutral-400">
               Name
             </label>
             <input
@@ -83,12 +86,12 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="Apple Inc."
-              className="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+            <label className="block text-sm font-medium text-neutral-500 dark:text-neutral-400">
               Quantity
             </label>
             <input
@@ -98,12 +101,12 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
               value={form.quantity}
               onChange={(e) => setForm({ ...form, quantity: e.target.value })}
               placeholder="10"
-              className="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-500 dark:text-gray-400">
+            <label className="block text-sm font-medium text-neutral-500 dark:text-neutral-400">
               Purchase price
             </label>
             <input
@@ -113,7 +116,7 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
               value={form.purchasePrice}
               onChange={(e) => setForm({ ...form, purchasePrice: e.target.value })}
               placeholder="150.00"
-              className="mt-1 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:focus:border-blue-400"
+              className={inputClasses}
             />
           </div>
 
@@ -123,14 +126,14 @@ export function AddStockModal({ open, onClose, onSubmit }: AddStockModalProps) {
             <button
               type="button"
               onClick={handleClose}
-              className="rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800"
+              className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!isValid || isSubmitting}
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-blue-400 dark:text-gray-950 dark:hover:bg-blue-300"
+              className="rounded-lg bg-navy-800 px-4 py-2 text-sm font-medium text-white hover:bg-navy-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-navy-300 dark:text-navy-900 dark:hover:bg-navy-100"
             >
               {isSubmitting ? 'Saving…' : 'Add Stock'}
             </button>

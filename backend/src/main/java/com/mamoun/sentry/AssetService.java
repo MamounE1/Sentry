@@ -21,6 +21,11 @@ public class AssetService {
         return repository.save(asset);
     }
 
+    public AssetEntity updateAsset(Long id, AssetEntity asset) {
+        asset.setId(id);
+        return repository.save(asset);
+    }
+
     public void deleteAsset(Long id) {
         repository.deleteById(id);
     }

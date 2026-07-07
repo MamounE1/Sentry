@@ -23,6 +23,11 @@ public class AssetController {
         return assetService.addAsset(asset);
     }
 
+    @PutMapping("/{id}")
+    public AssetEntity updateAsset(@PathVariable Long id, @RequestBody AssetEntity asset) {
+        return assetService.updateAsset(id, asset);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteAsset(@PathVariable Long id) {
         assetService.deleteAsset(id);
