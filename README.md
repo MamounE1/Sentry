@@ -5,7 +5,6 @@ Sentry is a portfolio tracking platform for investors, pairing a Java/Spring Boo
 ## Key Features
 - **REST API** for managing stock assets (create, read, update, delete), built on a clean Service-Repository architecture.
 - **Portfolio Dashboard** — add and remove holdings, view total portfolio value, holding count, and total shares, and see quantity per stock in a bar chart.
-- **Light/Dark Theme** with a persisted user preference.
 - **Cloud-Native Persistence** with a managed PostgreSQL database for reliable, scalable storage.
 - **Deployable Backend** designed to run as a hosted, publicly accessible service.
 
