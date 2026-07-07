@@ -20,4 +20,8 @@ public class AssetService {
     public AssetEntity addAsset(AssetEntity asset) {
         return repository.save(asset);
     }
+
+    public void deleteAsset(Long id) {
+        repository.deleteById(id);
+    }
 }

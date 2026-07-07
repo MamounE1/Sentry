@@ -22,4 +22,9 @@ public class AssetController {
     public AssetEntity createAsset(@RequestBody AssetEntity asset) {
         return assetService.addAsset(asset);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteAsset(@PathVariable Long id) {
+        assetService.deleteAsset(id);
+    }
 }
