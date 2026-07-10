@@ -1,0 +1,13 @@
+# Build artifacts / IDE / VCS — keep the Docker build context small
+target/
+.git/
+.idea/
+.vscode/
+*.iml
+*.log
+HELP.md
+README.md
+
+# Local-only config (never bake secrets into the image)
+src/main/resources/application.yaml
+.env

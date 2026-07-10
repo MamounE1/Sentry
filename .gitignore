@@ -8,6 +8,7 @@ target/
 *.log
 .DS_Store
 application.yaml
+.env
 
 ### STS ###
 .apt_generated
