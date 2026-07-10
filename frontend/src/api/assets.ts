@@ -1,9 +1,11 @@
 import type { Asset, NewAsset } from '../types/asset'
+import { API_BASE } from '../lib/config'
+import { authorizedFetch } from './client'
 
-const BASE_URL = '/api/assets'
+const BASE_URL = `${API_BASE}/api/assets`
 
 export async function fetchAssets(): Promise<Asset[]> {
-  const res = await fetch(BASE_URL)
+  const res = await authorizedFetch(BASE_URL)
   if (!res.ok) {
     throw new Error(`Failed to fetch assets: ${res.status}`)
   }
@@ -11,7 +13,7 @@ export async function fetchAssets(): Promise<Asset[]> {
 }
 
 export async function createAsset(asset: NewAsset): Promise<Asset> {
-  const res = await fetch(BASE_URL, {
+  const res = await authorizedFetch(BASE_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(asset),
@@ -23,7 +25,7 @@ export async function createAsset(asset: NewAsset): Promise<Asset> {
 }
 
 export async function updateAsset(id: number, asset: NewAsset): Promise<Asset> {
-  const res = await fetch(`${BASE_URL}/${id}`, {
+  const res = await authorizedFetch(`${BASE_URL}/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(asset),
@@ -35,7 +37,7 @@ export async function updateAsset(id: number, asset: NewAsset): Promise<Asset> {
 }
 
 export async function deleteAsset(id: number): Promise<void> {
-  const res = await fetch(`${BASE_URL}/${id}`, { method: 'DELETE' })
+  const res = await authorizedFetch(`${BASE_URL}/${id}`, { method: 'DELETE' })
   if (!res.ok) {
     throw new Error(`Failed to delete asset: ${res.status}`)
   }
